@@ -26,6 +26,7 @@ TEST(test_quick, AddFunction)
     auto error = sorter->sort<int, std::vector, STT_QUICK>(data);
 
     ASSERT_EQ(error, SE_SUCCESS);
+	ASSERT_TRUE(std::is_sorted(data.begin(), data.end()));
 }
 
 
