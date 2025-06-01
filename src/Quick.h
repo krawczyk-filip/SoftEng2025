@@ -8,9 +8,9 @@
 template<class T, template<typename...> class Container>
 class Quick : public SortTech<T, Container> {
 public:
-    inline SortError sort(SortData<T> & data) override;
+    inline SortError sort(SortData<T>& data) override;
 
-    void quickSort(SortData<T> & data) {
+    void quickSort(SortData<T>& data) {
         quickSortHelper(data, 0, data.size() - 1);
     }
 
